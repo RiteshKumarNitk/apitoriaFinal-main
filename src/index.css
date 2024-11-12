@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+
+  /* font-family: 'sans-serif'; */
+  font-family: 'Gilroy';
+}
+
+body {
+  margin: 0;
+}
+
+.custom-gradient {
+  background: linear-gradient(90deg, 
+    #402869 6%, 
+    #53265F 16%, 
+    #652556 23%, 
+    #7F2449 29%, 
+    #94223F 61%, 
+    #B02031 81%, 
+    #C21F28 95%
+  );
+}
