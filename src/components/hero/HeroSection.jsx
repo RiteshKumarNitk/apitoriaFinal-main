@@ -69,17 +69,17 @@ const HeroSection = () => {
     
                 {isPlaying ? (
                     <div className="">
-                        <FaPlay
-                        onClick={handlePlayPause}
-                        className="absolute inset-0 m-auto text-7xl rounded-full  h-18 bg-white p-5   text-red-600 z-10 cursor-pointer"
-                      />
+                      <FaPause
+                      className="absolute inset-0 m-auto text-7xl  rounded-full h-18 bg-white p-5  text-red-600 z-10 cursor-pointer"
+                      onClick={handlePlayPause}
+                    />
                     </div>
                  
                 ) : (
-                    <FaPause
-                    className="absolute inset-0 m-auto text-7xl  rounded-full h-18 bg-white p-5  text-red-600 z-10 cursor-pointer"
-                    onClick={handlePlayPause}
-                  />
+                  <FaPlay
+                  onClick={handlePlayPause}
+                  className="absolute inset-0 m-auto text-7xl rounded-full  h-18 bg-white p-5   text-red-600 z-10 cursor-pointer"
+                />
                 )}
               </div>
           </div>

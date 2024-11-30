@@ -1,19 +1,16 @@
-import './App.css'
-import Body from './Body'
-import FooterBar from './components/footer/FooterBar'
-import Header from './components/header/Header'
-import HeaderBar from './components/header/HeaderBar'
+import './App.css'; // Import global styles
+import Header from './components/header/Header';
+import Body from './pages/Body';
+import FooterBar from './components/footer/FooterBar';
 
 function App() {
-
   return (
     <>
-      {/* <HeaderBar/> */}
-      <Header/>
-      <Body/>
-      <FooterBar/>
+      <Header />
+      <Body />
+      <FooterBar />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
