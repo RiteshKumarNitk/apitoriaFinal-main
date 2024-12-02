@@ -24,3 +24,54 @@ body {
     #C21F28 95%
   );
 }
+
+@layer utilities {
+  .scrollbar {
+    position: relative;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 6px; /* Reduce the width */
+    height: 6px; /* Reduce the height */
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 50px;
+    background: #b9b9b9;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #f11818;
+    border-radius: 50px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #d60e0e;
+  }
+
+  /* Add arrows to scrollbar */
+  .scrollbar-arrow-left,
+  .scrollbar-arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: #f11818;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .scrollbar-arrow-left {
+    left: -40px; /* Adjust to position to the left */
+  }
+
+  .scrollbar-arrow-right {
+    right: -40px; /* Adjust to position to the right */
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/images/logo.jpg";
+import img from "../../assets/pics/logoapitoria.png";
 import { AiOutlineClose } from "react-icons/ai";
 
 const HeaderBar = () => {

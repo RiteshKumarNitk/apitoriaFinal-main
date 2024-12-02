@@ -7,20 +7,9 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTopBarVisible, setIsTopBarVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isSearchVisible, setIsSearchVisible] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
-  };
-
-  const toggleSearch = () => {
-    setIsSearchVisible((prev) => !prev);
-    setSearchQuery(""); // Clear the search input when toggling
-  };
-
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);
   };
 
   const navItems = [
@@ -52,14 +41,14 @@ const Header = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50">
-      {/* Top Bar */}
+      {/* Top Bar (Hidden on Mobile Screens) */}
       <header
         className={`custom-gradient w-full absolute transition-transform duration-300 ${
           isTopBarVisible ? "translate-y-0" : "-translate-y-full"
-        }`}
+        } hidden sm:block`}
       >
-        <nav className="px-4 py-4 flex justify-end items-center">
-          <ul className="hidden md:flex space-x-2 text-white text-sm">
+        <nav className="px-4 py-2 flex justify-end items-center">
+          <ul className="flex space-x-2 text-white text-sm">
             {quickLinks.map((link, index) => (
               <React.Fragment key={index}>
                 <li>
@@ -77,10 +66,10 @@ const Header = () => {
       {/* Main Header */}
       <header
         className={`bg-white shadow w-full fixed top-0 transition-transform duration-300 ${
-          isTopBarVisible ? "mt-12" : "mt-0"
+          isTopBarVisible ? "sm:mt-12 mt-0" : "mt-0"
         }`}
       >
-        <div className="px-6 py-4 flex justify-between items-center">
+        <div className="px-4 py-4 flex justify-between items-center">
           {/* Logo */}
           <img src={apitoria} width={80} height={40} alt="Apitoria logo" />
 
@@ -97,23 +86,9 @@ const Header = () => {
             </ul>
           </nav>
 
-          {/* Search and Action Links */}
-          <div className="hidden md:flex space-x-6 items-center">
-            <a href="#careers" className="hover:underline text-sm text-gray-300">
-              Careers
-            </a>
-            <a href="#contact" className="hover:underline text-sm text-gray-300">
-              Contact Us
-            </a>
-            <IoSearchOutline
-              className="cursor-pointer text-lg text-gray-300"
-              onClick={toggleSearch}
-            />
-          </div>
-
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-300"
+            className="md:hidden text-gray-700"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >
@@ -139,38 +114,10 @@ const Header = () => {
                   </a>
                 </li>
               ))}
-              <li>
-                <IoSearchOutline
-                  size={20}
-                  className="p-2 text-gray-300 hover:text-orange-600"
-                  onClick={toggleSearch}
-                />
-              </li>
             </ul>
           </nav>
         )}
       </header>
-
-      {/* Search Input */}
-      {/* {isSearchVisible && (
-        <div className=" absolute w-full bg-white z-40 shadow-lg">
-          <div className="px-4 py-2 flex items-center">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={handleSearchChange}
-              placeholder="Search..."
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-600"
-            />
-            <button
-              className="ml-2 px-3 py-2 bg-orange-600 text-white rounded"
-              onClick={() => alert(`Searching for: ${searchQuery}`)}
-            >
-              Search
-            </button>
-          </div>
-        </div>
-      )} */}
     </div>
   );
 };

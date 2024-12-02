@@ -59,7 +59,7 @@ const data = [
 // import "../../assets/im"
 const Business = () => {
   return (
-    <section>
+    <section className="container">
       <div className="text-center text-4xl py-6  font-thin">
         <h5 className="text-[#c21f28] font-[26px]">
           In the business of the bigger purpose.
@@ -67,17 +67,17 @@ const Business = () => {
         <h6 className="text-bold font-[26px]">Our ESG goals</h6>
       </div>
 
-      {/* <div className="t-center spacial-btn">
-        <button>
-          <a href="">Take a look at our progress </a>
-        </button>
-      </div> */}
       <div className="mx-4 my-8 flex">
-        <div className="relative p-12 h-full flex justify-between overflow-x-auto hide-scrollbar">
+        <div className="relative p-12 h-full flex justify-between overflow-x-auto scrollbar">
           {data.map((item, index) => (
             <Card key={index} data={item} index={index} />
           ))}
         </div>
+      </div>
+      <div className="t-center spacial-btn">
+        <button>
+          <a href="">Take a look at our progress </a>
+        </button>
       </div>
     </section>
   );
