@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import "../../assets/style.css";
 import logo from "../../assets/pics/logoapitoria.png";
 import img from "../../assets/images/image.png";
-import { FaPlay } from "react-icons/fa";
+import { FaPlay, FaPause } from "react-icons/fa";
 import bg2 from "../../assets/pics/bg2.png";
-import { FaPause } from "react-icons/fa";
+
 const HeroSection = () => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -15,8 +15,9 @@ const HeroSection = () => {
     } else {
       videoRef.current.play();
     }
-    setIsPlaying((prevIsPlaying) => !prevIsPlaying); // Use functional update
+    setIsPlaying((prevIsPlaying) => !prevIsPlaying);
   };
+
   return (
     <div>
       <div
@@ -27,35 +28,39 @@ const HeroSection = () => {
           backgroundPosition: "center center",
         }}
       >
-        <div className="section-2 flex flex-col md:flex-row items-center md:justify-between py-8 md:py-16 px-4 md:px-0">
+        {/* Section Content */}
+        <div className="section-2 flex flex-col md:flex-row items-center md:justify-between py-8 md:py-16 px-4 md:px-8">
+          {/* Logo Section */}
           <div className="w-full md:w-1/2 mb-8 md:mb-0 px-4 md:px-10">
             <img
               src={logo}
-              alt=""
+              alt="Apitoria Logo"
               className="w-full h-auto lg:p-10 p-4 md:p-5"
             />
           </div>
+
+          {/* Text Section */}
           <div className="w-full md:w-1/2">
-            <p className="leading-[35px] font-thin text-[25px] text-[#c21f28] mb-4 md:w-[60%]">
+            <p className="leading-[35px] font-thin text-[22px] md:text-[25px] text-[#c21f28] mb-4">
               The promise of Agility, Reliability, and Innovation
             </p>
-            <p className="text-[#675259] text-[20px] md:text-[25px] font-light leading-[30px] md:leading-[35px] mb-4 md:w-[86%]">
+            <p className="text-[#675259] text-[18px] md:text-[20px] font-light leading-[28px] md:leading-[35px] mb-4">
               Apitoria is focused on APIs, sustainability, good health, and you.
               As a 100% subsidiary of Aurobindo Pharma, a global powerhouse in
               the pharmaceutical realm. Apitoria is an established partner for
               pharmaceutical companies worldwide. So together, we can be the
               force towards
             </p>
-            <div className="leading-none tracking-[2px] md:tracking-[4px]">
-              <h2 className="text-[#c21f28] text-[40px] md:text-[60px] font-thin">
+            <div className="leading-none tracking-[1px] md:tracking-[3px]">
+              <h2 className="text-[#c21f28] text-[36px] md:text-[48px] font-thin">
                 Accelerating
               </h2>
-              <h3 className="text-[#3c286b] text-[40px] md:text-[60px] font-thin">
+              <h3 className="text-[#3c286b] text-[36px] md:text-[48px] font-thin">
                 Good
               </h3>
-              <h3 className="text-[#3c286b] text-[40px] md:text-[60px]">
+              <h3 className="text-[#3c286b] text-[36px] md:text-[48px]">
                 Health
-                <span className="text-[#c21f28] text-[35px] md:text-[45px]">
+                <span className="text-[#c21f28] text-[28px] md:text-[36px]">
                   .
                 </span>
               </h3>
@@ -63,19 +68,12 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="Scroll t-center">
-          {/* <a href="">Scroll to explore</a> */}
-          <div className="text-black font-thin">Scroll to explore</div>
+        {/* Video Section */}
+        <div className="scroll t-center">
+          <div className="text-black font-thin text-center">Scroll to explore</div>
           <div className="m-auto h-[80px] w-[1px] bg-black mt-[10px]"></div>
-          <div className="picture justify-center flex">
-            {/* <img src={img} alt="" />
-            <div className="round">
-              <a href="">
-                width: 100%;
-    border-radius: 20px;
-              </a>
-            </div> */}
-            <div className="relative  justify-center items-center w-[800px] rounded-3xl overflow-hidden">
+          <div className="flex justify-center">
+            <div className="relative flex justify-center items-center w-full max-w-[1200px] rounded-3xl overflow-hidden mt-8 px-4 md:px-0">
               {/* Video Element */}
               <video
                 ref={videoRef}
@@ -89,19 +87,17 @@ const HeroSection = () => {
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#402869] via-[#7F2449] to-[#C21F28] opacity-75 pointer-events-none"></div>
 
-              {isPlaying ? (
-                <div className="">
-                  <FaPause
-                    className="absolute inset-0 m-auto text-7xl  rounded-full h-18 bg-white p-5  text-red-600 z-10 cursor-pointer"
-                    onClick={handlePlayPause}
-                  />
-                </div>
-              ) : (
-                <FaPlay
-                  onClick={handlePlayPause}
-                  className="absolute inset-0 m-auto text-7xl rounded-full  h-18 bg-white p-5   text-red-600 z-10 cursor-pointer"
-                />
-              )}
+              {/* Play/Pause Button */}
+              <div
+                onClick={handlePlayPause}
+                className="absolute inset-0 flex items-center justify-center z-10 cursor-pointer"
+              >
+                {isPlaying ? (
+                  <FaPause className="text-[50px] md:text-[80px] rounded-full bg-white p-4 text-red-600 shadow-lg overflow-visible" />
+                ) : (
+                  <FaPlay className="text-[50px] md:text-[80px] rounded-full bg-white p-4 text-red-600 shadow-lg overflow-visible" />
+                )}
+              </div>
             </div>
           </div>
         </div>

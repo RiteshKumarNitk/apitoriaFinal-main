@@ -5,7 +5,7 @@ const Card = ({ data, index }) => {
     // even index, render different card
     return (
       <div className="mx-4 pt-11 my-8">
-        <div className="relative flex flex-col mt-6 text-gray-700 bg-[#efefef] shadow-md bg-clip-border rounded-2xl rounded-bl-[50px] w-72">
+        <div className="relative flex flex-col mt-6 text-gray-700 bg-[#e3dfde] bg-clip-border rounded-2xl rounded-bl-[50px] w-72">
           <div className="relative h-56 overflow-hidden text-white bg-clip-border bg-blue-gray-500 shadow-blue-gray-500/40">
             <img src={data.img} alt="card-image" />
           </div>
@@ -24,7 +24,7 @@ const Card = ({ data, index }) => {
     // odd index, render same card
     return (
       <div className="mx-4 my-8">
-        <div className="relative flex flex-col mt-6 text-gray-700 bg-[#efefef] shadow-md bg-clip-border rounded-2xl rounded-bl-[50px] w-72">
+        <div className="relative flex flex-col mt-6 text-gray-700 bg-[#e3dfde] bg-clip-border rounded-2xl rounded-bl-[50px] w-72">
           <div className="relative h-56 overflow-hidden text-white bg-clip-border bg-blue-gray-500 shadow-blue-gray-500/40">
             <img src={data.img} alt="card-image" />
           </div>

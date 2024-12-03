@@ -15,22 +15,23 @@ const portfolioItems = [
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed erat neque.",
   },
   {
-    image: img2,
+  
+    image: img4,
     title: "CNS & CVS",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed erat neque.",
   },
   {
-    image: img3,
+    image: img5,
     title: "Complex molecules",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed erat neque.",
   },
   {
-    image: img4,
+    image: img3,
     title: "Antidiabetics",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed erat neque.",
   },
   {
-    image: img5,
+    image: img2,
     title: "Antihistamines",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed erat neque.",
   },
@@ -44,11 +45,9 @@ const portfolioItems = [
 const PortfolioSection = () => {
   return (
     <div
-      className="py-16"
+      className="py-48 md:py-32 lg:py-32 bg-cover bg-right md:bg-center lg:bg-center xl:bg-center"
       style={{
         backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
       }}
     >
       <div className="container mx-auto px-4">

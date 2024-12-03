@@ -28,7 +28,9 @@ body {
 @layer utilities {
   .scrollbar {
     position: relative;
+    
   }
+  ::-webkit-scrollbar-track {max-height: 50%; height: 50%;}
 
   .scrollbar::-webkit-scrollbar {
     width: 6px; /* Reduce the width */
@@ -36,7 +38,7 @@ body {
   }
 
   .scrollbar::-webkit-scrollbar-track {
-    border-radius: 50px;
+
     background: #b9b9b9;
   }
 
@@ -74,4 +76,47 @@ body {
   .scrollbar-arrow-right {
     right: -40px; /* Adjust to position to the right */
   }
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #91b480;
+}
+
+
+::-webkit-scrollbar-button {
+  height: 25px; /* Button size */
+  width: 250px;
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; /* Arrow size */
+  color: white; /* Arrow color */
+  font-family: Arial, sans-serif; /* Use a readable font */
+}
+
+/* Top Button (Up Arrow) */
+::-webkit-scrollbar-button:vertical:decrement {
+  content: "▲"; /* Up arrow symbol */
+}
+
+/* Bottom Button (Down Arrow) */
+::-webkit-scrollbar-button:vertical:increment {
+  content: "▼"; /* Down arrow symbol */
+}
+
+/* Left Button (Left Arrow) */
+::-webkit-scrollbar-button:horizontal:decrement {
+  content: "◀"; /* Left arrow symbol */
+}
+
+/* Right Button (Right Arrow) */
+::-webkit-scrollbar-button:horizontal:increment {
+  content: "▶"; /* Right arrow symbol */
+}
+
+/* Hover Effects */
+::-webkit-scrollbar-button:hover {
+  /* background: #d32f2f; 
+  border-color: #b71c1c; */
 }
