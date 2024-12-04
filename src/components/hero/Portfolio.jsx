@@ -1,10 +1,10 @@
 import React from "react";
-import img1 from "../../assets/images/capsules.png";
-import img2 from "../../assets/images/img-6.png";
-import img3 from "../../assets/images/img-7.png";
-import img4 from "../../assets/images/img-3.png";
-import img5 from "../../assets/images/img-4.png";
-import img6 from "../../assets/images/img-5.png";
+import img1 from "../../assets/images/Antidiabetics.png";
+import img2 from "../../assets/images/cns.png";
+import img3 from "../../assets/images/Complexmolecules.png";
+import img4 from "../../assets/images/Antidiabetics.png";
+import img5 from "../../assets/images/Antihistamines.png";
+import img6 from "../../assets/images/Oncology.png";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import bg from "../../assets/pics/bg.png";
 
@@ -16,22 +16,22 @@ const portfolioItems = [
   },
   {
   
-    image: img4,
+    image: img2,
     title: "CNS & CVS",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed erat neque.",
   },
   {
-    image: img5,
+    image: img3,
     title: "Complex molecules",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed erat neque.",
   },
   {
-    image: img3,
+    image: img4,
     title: "Antidiabetics",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed erat neque.",
   },
   {
-    image: img2,
+    image: img5,
     title: "Antihistamines",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed erat neque.",
   },

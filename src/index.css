@@ -2,35 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-  /* font-family: 'sans-serif'; */
-  font-family: 'Gilroy';
+:root {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins globally */
 }
 
+*{
+  padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
 body {
   margin: 0;
 }
 
 .custom-gradient {
-  background: linear-gradient(90deg, 
-    #402869 6%, 
-    #53265F 16%, 
-    #652556 23%, 
-    #7F2449 29%, 
-    #94223F 61%, 
-    #B02031 81%, 
+  background: linear-gradient(
+    90deg,
+    #402869 6%,
+    #53265F 16%,
+    #652556 23%,
+    #7F2449 29%,
+    #94223F 61%,
+    #B02031 81%,
     #C21F28 95%
   );
 }
 
+/* Tailwind Utilities Layer */
 @layer utilities {
   .scrollbar {
     position: relative;
-    
   }
-  ::-webkit-scrollbar-track {max-height: 50%; height: 50%;}
+  ::-webkit-scrollbar-track {
+    max-height: 50%;
+    height: 50%;
+  }
 
   .scrollbar::-webkit-scrollbar {
     width: 6px; /* Reduce the width */
@@ -38,7 +50,6 @@ body {
   }
 
   .scrollbar::-webkit-scrollbar-track {
-
     background: #b9b9b9;
   }
 
@@ -51,7 +62,6 @@ body {
     background: #d60e0e;
   }
 
-  /* Add arrows to scrollbar */
   .scrollbar-arrow-left,
   .scrollbar-arrow-right {
     position: absolute;
@@ -70,11 +80,11 @@ body {
   }
 
   .scrollbar-arrow-left {
-    left: -40px; /* Adjust to position to the left */
+    left: -40px;
   }
 
   .scrollbar-arrow-right {
-    right: -40px; /* Adjust to position to the right */
+    right: -40px;
   }
 }
 
@@ -82,41 +92,33 @@ body {
   background: #91b480;
 }
 
-
 ::-webkit-scrollbar-button {
-  height: 25px; /* Button size */
+  height: 25px;
   width: 250px;
-  border-radius: 50%; /* Circular shape */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px; /* Arrow size */
-  color: white; /* Arrow color */
-  font-family: Arial, sans-serif; /* Use a readable font */
+  font-size: 20px;
+  color: white;
 }
 
-/* Top Button (Up Arrow) */
 ::-webkit-scrollbar-button:vertical:decrement {
-  content: "▲"; /* Up arrow symbol */
+  content: "▲";
 }
 
-/* Bottom Button (Down Arrow) */
 ::-webkit-scrollbar-button:vertical:increment {
-  content: "▼"; /* Down arrow symbol */
+  content: "▼";
 }
 
-/* Left Button (Left Arrow) */
 ::-webkit-scrollbar-button:horizontal:decrement {
-  content: "◀"; /* Left arrow symbol */
+  content: "◀";
 }
 
-/* Right Button (Right Arrow) */
 ::-webkit-scrollbar-button:horizontal:increment {
-  content: "▶"; /* Right arrow symbol */
+  content: "▶";
 }
 
-/* Hover Effects */
 ::-webkit-scrollbar-button:hover {
-  /* background: #d32f2f; 
-  border-color: #b71c1c; */
+  /* Styles for hover state */
 }

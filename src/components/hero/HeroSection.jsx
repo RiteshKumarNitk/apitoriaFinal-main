@@ -52,13 +52,13 @@ const HeroSection = () => {
               force towards
             </p>
             <div className="leading-none tracking-[1px] md:tracking-[3px]">
-              <h2 className="text-[#c21f28] text-[36px] md:text-[48px] font-thin">
+              <h2 className="text-[#c21f28] text-[36px] md:text-[48px]  font-light font-[poppins]">
                 Accelerating
               </h2>
-              <h3 className="text-[#3c286b] text-[36px] md:text-[48px] font-thin">
+              <h3 className="text-[#3c286b] text-[36px] md:text-[48px] font-light font-[poppins]">
                 Good
               </h3>
-              <h3 className="text-[#3c286b] text-[36px] md:text-[48px]">
+              <h3 className="text-[#3c286b] text-[36px] md:text-[48px] font-light font-[poppins]">
                 Health
                 <span className="text-[#c21f28] text-[28px] md:text-[36px]">
                   .

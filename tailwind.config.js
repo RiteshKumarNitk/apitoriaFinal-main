@@ -6,6 +6,10 @@ export default {
     extend: { animation: {
       tilt: 'tilt 10s infinite linear',
     },
+    fontFamily: {
+      sans: ['Poppins', 'Poppins'],
+      // gilroy: ['Gilroy', 'sans-serif'], // Keep your existing Gilroy font
+    },
     keyframes: {
       tilt: {
         '0%, 50%, 100%': {
