@@ -53,21 +53,21 @@ const data = [
 const Business = () => {
   return (
     <section className="container">
-      <div className="text-center text-4xl py-6  font-thin">
+      <div className="text-center text-4xl mt-6 font-Regular">
         <h5 className="text-[#c21f28] font-[26px]">
           In the business of the bigger purpose.
         </h5>
         <h6 className="text-bold font-[26px]">Our ESG goals</h6>
       </div>
 
-      <div className="mx-4 my-8 flex">
+      <div className="mx-4 my-0 flex">
         <div className="relative p-12 h-full flex justify-between overflow-x-auto scrollbar">
           {data.map((item, index) => (
             <Card key={index} data={item} index={index} />
           ))}
         </div>
       </div>
-      <div className="t-center spacial-btn">
+      <div className="t-center spacial-btn mt-8">
         <button>
           <a href="">Take a look at our progress </a>
         </button>

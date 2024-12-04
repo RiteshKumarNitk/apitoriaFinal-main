@@ -41,7 +41,7 @@ const HeroSection = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-1/2">
-            <p className="leading-[35px] font-thin text-[22px] md:text-[25px] text-[#c21f28] mb-4">
+            <p className="leading-[35px] font-extralight text-[22px] md:text-[25px] text-[#c21f28] mb-4">
               The promise of Agility, Reliability, and Innovation
             </p>
             <p className="text-[#675259] text-[18px] md:text-[20px] font-light leading-[28px] md:leading-[35px] mb-4">
@@ -52,13 +52,13 @@ const HeroSection = () => {
               force towards
             </p>
             <div className="leading-none tracking-[1px] md:tracking-[3px]">
-              <h2 className="text-[#c21f28] text-[36px] md:text-[48px]  font-light font-[poppins]">
+              <h2 className="text-[#c21f28] text-[36px] md:text-[48px]  font-extralight font-[poppins]">
                 Accelerating
               </h2>
-              <h3 className="text-[#3c286b] text-[36px] md:text-[48px] font-light font-[poppins]">
+              <h3 className="text-[#3c286b] text-[36px] md:text-[48px] font-extralight font-[poppins]">
                 Good
               </h3>
-              <h3 className="text-[#3c286b] text-[36px] md:text-[48px] font-light font-[poppins]">
+              <h3 className="text-[#3c286b] text-[36px] md:text-[48px] font-extralight font-[poppins]">
                 Health
                 <span className="text-[#c21f28] text-[28px] md:text-[36px]">
                   .
@@ -70,7 +70,7 @@ const HeroSection = () => {
 
         {/* Video Section */}
         <div className="scroll t-center">
-          <div className="text-black font-thin text-center">Scroll to explore</div>
+          <div className="text-black font-extralight text-center">Scroll to explore</div>
           <div className="m-auto h-[80px] w-[1px] bg-black mt-[10px]"></div>
           <div className="flex justify-center">
             <div className="relative flex justify-center items-center w-full max-w-[1200px] rounded-3xl overflow-hidden mt-8 px-4 md:px-0">

@@ -67,7 +67,7 @@ const FooterBar = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="footer-end px-0 py-4 flex flex-col md:flex-row justify-between items-center lg:px-5 lg:py-4">
+      <div className="footer-end px-0 py-4 flex flex-col md:flex-row justify-between items-center lg:pl-5 lg:pr-0 lg:py-4">
         {/* Disclaimer Section */}
         <div className="mb-4 md:mb-0 text-center md:text-left">
           <h6 className="font-bold text-sm md:text-base">© 2024 Apitoria. All rights reserved</h6>

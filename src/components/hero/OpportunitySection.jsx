@@ -51,9 +51,9 @@ const OpportunitySection = () => {
 
   return (
     <section className="py-5">
-      <div className="text-center text-4xl py-6 font-thin">
+      <div className="text-center text-4xl py-6 font-Regular">
         <h5 className="text-[#3c286b]">Capabilities. Possibilities.</h5>
-        <h6 className="text-[#c21f28]">All the opportunity, to accelerate</h6>
+        <h6 className="text-[#c21f28]">All the opportunity, to accelerate.</h6>
       </div>
       <div className="grid bg-gradient-to-t from-[#402869] via-[#7F2449] to-[#C21F28] rounded-3xl shadow-xl my-4 max-w-screen-xl mx-auto xl:gap-0 lg:grid-cols-12">
         <div className="hidden lg:mt-0 lg:col-span-7 lg:flex">
@@ -73,7 +73,7 @@ const OpportunitySection = () => {
             />
           <div className="my-2 bg-white h-[5px] w-[65px] rounded-2xl"></div>
           {/* Dynamic Text */}
-          <p className="text-white text-4xl font-thin">
+          <p className="text-white text-4xl font-extralight">
             {config[selectedIndex].text}
           </p>
           {/* Dynamic Image */}

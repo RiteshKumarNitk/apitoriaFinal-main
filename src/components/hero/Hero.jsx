@@ -40,9 +40,9 @@ const Hero = () => {
                 onClick={handlePlayPause}
               >
                 {isPlaying ? (
-                  <FaRegPauseCircle className="text-2xl text-gray-600" />
+                  <FaRegPauseCircle className="text-lg text-gray-600" />
                 ) : (
-                  <FaRegCirclePlay className="text-2xl text-red-600" />
+                  <FaRegCirclePlay className="text-lg text-red-600" />
                 )}
               </div>
             </div>
