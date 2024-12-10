@@ -44,7 +44,7 @@ const OpportunitySection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedIndex((prevIndex) => (prevIndex + 1) % config.length);
-      console.log("Selected Index Changed:", selectedIndex); // Debugging interval
+      // console.log("Selected Index Changed:", selectedIndex); // Debugging interval
     }, 3000);
     return () => clearInterval(interval); // Cleanup on unmount
   }, [selectedIndex]);

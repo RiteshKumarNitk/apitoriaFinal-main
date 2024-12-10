@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import apitoria from "../../assets/apitoria.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,24 +17,23 @@ const Header = () => {
   const toggleSearch = () => {
     setIsSearchOpen((prevState) => !prevState);
   };
-
   const navItems = [
-    { name: "Who We Are", href: "#who-we-are" },
-    { name: "Our Business", href: "#our-business" },
-    { name: "Our Products", href: "#products" },
-    { name: "Sustainability", href: "#sustainability" },
+    { name: "Who We Are", to: "/who-we-are" },
+    { name: "Our Business", to: "/our-business" },
+    { name: "Our Products", to: "/products" },
+    { name: "Sustainability", to: "/sustainability" },
   ];
 
   const quickLinks = [
-    { name: "Quick Quote", href: "#quick-quote" },
-    { name: "Government Contracting", href: "#government-contracting" },
-    { name: "News", href: "#news" },
+    { name: "Quick Quote", to: "/quick-quote" },
+    { name: "Government Contracting", to: "/government-contracting" },
+    { name: "News", to: "/news" },
   ];
 
   const navItem2 = [
-    { name: "Media", href: "#Media" },
-    { name: "Careers", href: "#Careers" },
-    { name: "Contact Us", href: "#Contact-Us" },
+    { name: "Media", to: "/media" },
+    { name: "Careers", to: "/careers" },
+    { name: "Contact Us", to: "/contact-us" },
   ];
 
   useEffect(() => {
@@ -61,9 +61,9 @@ const Header = () => {
             {quickLinks.map((link, index) => (
               <React.Fragment key={index}>
                 <li>
-                  <a href={link.href} className="hover:underline">
+                  <Link to={link.to} className="hover:underline">
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               </React.Fragment>
             ))}
@@ -77,18 +77,18 @@ const Header = () => {
           isTopBarVisible ? "sm:mt-12 mt-0" : "mt-0"
         }`}
       >
-        <div className="px-4 py-4 flex justify-between items-center container"> 
+        <div className="px-4 py-4 flex justify-between items-center container">
           {/* Logo */}
           <img src={apitoria} width={80} height={40} alt="Apitoria logo" />
 
           {/* Navigation for Larger Screens */}
           <nav className="hidden md:flex justify-between">
-            <ul className="flex space-x-6  text-gray-700">
+            <ul className="flex space-x-6 text-gray-700">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <a href={item.href} className="hover:text-red-600">
+                  <Link to={item.to} className="hover:text-red-600">
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -100,9 +100,9 @@ const Header = () => {
               {navItem2.map((item, index) => (
                 <React.Fragment key={index}>
                   <li>
-                    <a href={item.href} className="hover:text-red-600">
+                    <Link to={item.to} className="hover:text-red-600">
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                   {index < navItem2.length - 1 && <li>|</li>}
                 </React.Fragment>
@@ -174,12 +174,12 @@ const Header = () => {
             <ul className="flex flex-col items-start space-y-2 p-4">
               {[...quickLinks, ...navItems].map((item, index) => (
                 <li key={index}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.to}
                     className="p-2 text-gray-700 hover:text-red-600"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -187,14 +187,12 @@ const Header = () => {
               {navItem2.map((item, index) => (
                 <React.Fragment key={index}>
                   <li>
-                    <a href={item.href} className="hover:text-red-600">
+                    <Link to={item.to} className="hover:text-red-600">
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 </React.Fragment>
               ))}
-
-              {/* Search Icon or Search Box */}
             </div>
           </nav>
         )}

@@ -1,49 +1,50 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import img from "../../assets/pics/logoapitoria.png";
-import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPinterest, FaTwitter, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaPinterest,
+  FaTwitter,
+  FaXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 
 const FooterBar = () => {
   const footerLinks = [
     {
       title: "Resources",
       links: [
-        { name: "Investors", href: "#Investors" },
-        { name: "Careers", href: "#Careers" },
-        { name: "Media", href: "#Media" },
-        { name: "Partners", href: "#Partners" },
+        { name: "Investors", to: "/investors" },
+        { name: "Careers", to: "/careers" },
+        { name: "Media", to: "/media" },
+        { name: "Partners", to: "/partners" },
       ],
     },
-    // {
-    //   title: "Support",
-    //   links: [
-    //     { name: "Grant Seekers", href: "#Grant_Seekers" },
-    //     { name: "Healthcare Professionals", href: "#Healthcare_Professionals" },
-    //     { name: "Business to Business", href: "#Business_to_Business" },
-    //     { name: "Merchandise", href: "#Merchandise" },
-    //   ],
-    // },
     {
       title: "Legal",
       links: [
-        { name: "Privacy Statement", href: "#Privacy Statement" },
-        { name: "Terms of Use", href: "#Terms_of_Use" },
-        { name: "Contact Us", href: "#Contact_Us" },
+        { name: "Privacy Statement", to: "/privacy-statement" },
+        { name: "Terms of Use", to: "/terms-of-use" },
+        { name: "Contact Us", to: "/contact-us" },
       ],
     },
   ];
 
   const socialLinks = [
-    { icon: <FaXTwitter  />, title: "Twitter", href: "#Twitter" },
-    { icon: <FaFacebook />, title: "Facebook", href: "#Facebook" },
-    { icon: <FaLinkedin />, title: "LinkedIn", href: "#LinkedIn" },
-    { icon: <FaInstagram />, title: "Instagram", href: "#Instagram" },
-    { icon: <FaYoutube />, title: "Youtube", href: "#Youtube" },
+    { icon: <FaXTwitter />, title: "Twitter", href: "https://twitter.com" },
+    { icon: <FaFacebook />, title: "Facebook", href: "https://facebook.com" },
+    { icon: <FaLinkedin />, title: "LinkedIn", href: "https://linkedin.com" },
+    { icon: <FaInstagram />, title: "Instagram", href: "https://instagram.com" },
+    { icon: <FaYoutube />, title: "Youtube", href: "https://youtube.com" },
   ];
 
   return (
-    <footer className="px-4 sm:px-6 lg:px-32 ">
+    <footer className="px-4 sm:px-6 lg:px-32">
       {/* Footer Content */}
-      <div className="footer py-12 pb-18 ">
+      <div className="footer py-12 pb-18">
         <div className="flex flex-col md:flex-row justify-between">
           {/* Logo Section */}
           <div className="py-0 md:px-5 px-0 lg:px-5 mb-9 md:mb-0">
@@ -52,11 +53,16 @@ const FooterBar = () => {
           {/* Links Section */}
           <div className="flex flex-col md:flex-row md:space-x-10">
             {footerLinks.map((section, index) => (
-              <div key={index} className={`text-lg md:text-xl mb-6 md:mb-0 ${section.title === "Legal" ? "text-sm lg:text-base" : ""}`}>
+              <div
+                key={index}
+                className={`text-lg md:text-xl mb-6 md:mb-0 ${
+                  section.title === "Legal" ? "text-sm lg:text-base" : ""
+                }`}
+              >
                 <ul className="text-center md:text-left">
                   {section.links.map((link, idx) => (
                     <li key={idx} className="hover:underline mb-1">
-                      <a href={link.href}>{link.name}</a>
+                      <Link to={link.to}>{link.name}</Link>
                     </li>
                   ))}
                 </ul>
@@ -85,7 +91,7 @@ const FooterBar = () => {
               rel="noopener noreferrer"
               href={social.href}
               title={social.title}
-              className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600 text-white hover:bg-gray-300 transition-all" 
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600 text-white hover:bg-gray-300 transition-all"
             >
               {social.icon}
             </a>
