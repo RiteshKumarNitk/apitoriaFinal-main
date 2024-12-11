@@ -79,8 +79,9 @@ const Header = () => {
       >
         <div className="px-4 py-4 flex justify-between items-center container">
           {/* Logo */}
-          <img src={apitoria} width={80} height={40} alt="Apitoria logo" />
-
+          <Link to="/">
+            <img src={apitoria} width={80} height={40} alt="Apitoria logo" />
+          </Link>
           {/* Navigation for Larger Screens */}
           <nav className="hidden md:flex justify-between">
             <ul className="flex space-x-6 text-gray-700">

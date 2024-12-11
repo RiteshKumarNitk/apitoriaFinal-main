@@ -1,8 +1,21 @@
-import React from "react";
 import PurposePage from "../components/whoweare/PurposePage";
-import BusinessCare from "../components/whoweare/BusinessCare";
 import Card from "../components/common/Card";
 const WhoWeAres = () => {
+  const headerContainerdata1 = {
+    headerTitle: "Businesscare Care",
+    headerContent:
+      "The Continuous monitoring and improving of performance indicators.",
+  };
+  const headerContainerdata2 = {
+    headerTitle: "Businesscare Care",
+    headerContent:
+      "The Continuous monitoring and improving of performance indicators.",
+  };
+  const headerContainerdata3 = {
+    headerTitle: "Businesscare Care",
+    headerContent:
+      "The Continuous monitoring and improving of performance indicators.",
+  };
   const accordionData1 = [
     {
       title: "What is Flowbite?",
@@ -81,6 +94,7 @@ const WhoWeAres = () => {
   ];
   const accordionData3 = [
     {
+      header: [],
       title: "What is Flowbite?",
       content: (
         <>
@@ -124,20 +138,23 @@ const WhoWeAres = () => {
       <div className=" gap-3">
         <Card
           accordionData={accordionData1}
+          headerContainerdata={headerContainerdata1}
           labimg={
             "https://images.pexels.com/photos/4617316/pexels-photo-4617316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           }
         />
         <Card
           accordionData={accordionData2}
+          headerContainerdata={headerContainerdata2}
           labimg={
-            "https://images.pexels.com/photos/4617316/pexels-photo-4617316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            "https://images.pexels.com/photos/4545205/pexels-photo-4545205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           }
         />
         <Card
           accordionData={accordionData3}
+          headerContainerdata={headerContainerdata3}
           labimg={
-            "https://images.pexels.com/photos/4617316/pexels-photo-4617316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            "https://images.pexels.com/photos/1682497/pexels-photo-1682497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           }
         />
       </div>

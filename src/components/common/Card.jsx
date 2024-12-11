@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react'
 import { LuMinus, LuPlus } from 'react-icons/lu';
 
-const Card = ({accordionData, labimg, }) => {
+const Card = ({accordionData, labimg, headerContainerdata }) => {
 
     const [activeIndex, setActiveIndex] = useState(0); // Set the first accordion item as active by default
 
@@ -11,9 +11,10 @@ const Card = ({accordionData, labimg, }) => {
         // Keep the first accordion open always
         setActiveIndex(index === activeIndex ? activeIndex : index); 
       };
+      console.log(headerContainerdata);
 
   return (
-    <section className="bg-transparent mb-8 px-4 sm:px-6 lg:px-32">
+    <section className="bg-transparent mb-8 ">
     {/* Title Section */}
  
 
@@ -24,18 +25,20 @@ const Card = ({accordionData, labimg, }) => {
         <img
           src={labimg}
           alt="Lab"
-          className="w-full h-full rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none object-cover"
+          className="w-full h-full rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none object-cover "
         />
       </div>
 
       {/* Right Section: Content */}
       <div className="flex flex-col justify-center px-8 py-8 space-y-4 lg:px-12 lg:py-12">
+        
         <h2 className="text-gray-800 leading-4 w-5/6">
           <p className="text-red-500 text-2xl lg:text-xl font-bold">
-            Businesscare Care
+          {headerContainerdata?.headerTitle}
+          
           </p>
           <p className="text-[#3c286b] text-lg lg:text-lg font-normal">
-            The Continuous monitoring and improving of performance indicators.
+          {headerContainerdata?.headerTitle}
           </p>
         </h2>
         <div id="accordion-flush">
@@ -79,6 +82,8 @@ export default Card
 
 Card.propTypes = {
     accordionData: PropTypes.array,
-    labimg: PropTypes.string
+    labimg: PropTypes.string,
+    headerContainerdata: PropTypes.object
 }
+
   
