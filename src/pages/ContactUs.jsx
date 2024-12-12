@@ -4,7 +4,7 @@ import Card from "../components/componentItems/Card";
 import ContactCard from "../components/contactUs/ContactCard";
 import AddressInfo from "../components/contactUs/AddressInfo";
 import bg2 from "../assets/pics/bg2.png";
-import labimg from "../assets/pics/zone-img.jpg";
+import labimg from "../assets/pics/building.jpg";
 import RegionalOffice from "../components/contactUs/RegionalOffice";
 
 const cardsData = [
@@ -34,8 +34,8 @@ const cardData = [
     description: (
       <>
         <p>
-          Aurobindo Pharma Limited,Plot No. 2, Maitrivihar,Ameerpet,Hyderabad –
-          500038Telangana, India.
+          Aurobindo Pharma Limited,Plot No. 2, Maitrivihar, Ameerpet, Hyderabad –
+          500038 Telangana, India.
         </p>
         <br />
         <p>
@@ -147,9 +147,15 @@ const ContactUs = () => {
         cards={cardsData}
       />
       {/* <BusinessCare /> */}
-      <div className="">
-        <AddressInfo cards={cardData} />
-        <RegionalOffice cards={cardData2} />
+      <div className="px-8 sm:px-6 lg:px-32">
+        <div className="px-6">
+          <AddressInfo cards={cardData} />
+          <div className="sm:p-4 p-0"> 
+            <RegionalOffice cards={cardData2} />
+
+          </div>
+
+        </div>
       </div>
     </div>
   );
