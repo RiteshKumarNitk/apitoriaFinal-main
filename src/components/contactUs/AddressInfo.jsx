@@ -9,7 +9,8 @@ const AddressInfo = ({ cards }) => {
           className="bg-transparent flex flex-col justify-start  transition-shadow"
         >
           <h3 className="text-lg font-bold text-red-600">{card.title}</h3>
-          <p className="text-gray-600 text-sm mt-2">{card.description}</p>
+         <hr className="w-16 h-[6px]  my-2 border-3 bg-gray-900" />
+          <p className="text-black text-sm mt-2">{card.description}</p>
         </div>
       ))}
     </div>

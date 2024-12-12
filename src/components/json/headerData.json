@@ -1,0 +1,27 @@
+{
+    "backgroundImage": "/path/to/background-image.jpg",
+    "title": "Welcome to Apitoria",
+    "description": "Empowering limitless possibilities through inclusivity and innovation.",
+    "overlayImage": "/path/to/overlay-image.jpg",
+    "breadcrumbs": [
+      { "text": "Home", "link": "/" },
+      { "text": "About Us", "link": "/about" },
+      { "text": "Culture", "link": "/culture" }
+    ],
+    "overlayLogo": "/path/to/logoapitorialogo.png",
+    "cards": [
+      {
+        "title": "Every voice is heard",
+        "content": "Our inclusive culture ensures everyone is empowered."
+      },
+      {
+        "title": "Through agility",
+        "content": "We adapt and grow together as a team."
+      },
+      {
+        "title": "Empowering individuals",
+        "content": "Every individual is valued and inspired to excel."
+      }
+    ]
+  }
+  

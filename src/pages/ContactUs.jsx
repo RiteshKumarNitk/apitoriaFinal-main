@@ -136,6 +136,10 @@ const cardData2 = [
   },
 ];
 
+const breadcrumbs = [
+  { text: "Home", link: "/" },
+  { text: "Contact Us", link: "/contact-us" },
+];
 const ContactUs = () => {
   return (
     <div className=" xl:mt-24 lg:mt-24 md:mt-32 sm:mt-24 mt-8">
@@ -145,16 +149,15 @@ const ContactUs = () => {
         title="Contact Us"
         description="At Apitoria, we value your feedback as we are committed to continuously improving our products and services, and providing greater value to our patients, customers and other stakeholders."
         cards={cardsData}
+        breadcrumbs ={breadcrumbs}
       />
       {/* <BusinessCare /> */}
       <div className="px-8 sm:px-6 lg:px-32">
         <div className="px-6">
           <AddressInfo cards={cardData} />
-          <div className="sm:p-4 p-0"> 
+          <div className=""> 
             <RegionalOffice cards={cardData2} />
-
           </div>
-
         </div>
       </div>
     </div>

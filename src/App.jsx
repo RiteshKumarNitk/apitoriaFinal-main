@@ -14,6 +14,7 @@ import ContactUs from "./pages/ContactUs";
 import QuickQuote from "./pages/QuickQuote";
 import GovernmentContracting from "./pages/GovernmentContracting";
 import News from "./pages/News";
+import LifeAtApitoria from "./pages/LifeAtApitoria";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/quick-quote" element={<QuickQuote />} />
         <Route path="/government-contracting" element={<GovernmentContracting />} />
         <Route path="/news" element={<News />} />
+        <Route path="/life-at-apitoria" element={<LifeAtApitoria />} />
       </Routes>
       <FooterBar />
     </Router>
