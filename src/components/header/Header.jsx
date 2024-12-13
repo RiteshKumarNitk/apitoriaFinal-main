@@ -178,6 +178,7 @@ const Header = () => {
                   <Link
                     to={item.to}
                     className="p-2 text-gray-700 hover:text-red-600"
+                    onClick={() => setIsMobileMenuOpen(false)} // Close menu on link click
                   >
                     {item.name}
                   </Link>
