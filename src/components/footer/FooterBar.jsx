@@ -77,11 +77,11 @@ const FooterBar = () => {
         {/* Disclaimer Section */}
         <div className="mb-4 md:mb-0 text-center md:text-left">
           <h6 className="font-bold text-sm md:text-base">© 2024 Apitoria. All rights reserved</h6>
-          <p className="w-full md:w-[80%] text-xs md:text-sm">
+          {/* <p className="w-full md:w-[80%] text-xs md:text-sm">
             This information—including product information—is intended only for
             residents of the United States. The products discussed herein may
             have different labeling in different countries.
-          </p>
+          </p> */}
         </div>
         {/* Social Links */}
         <div className="flex items-center space-x-2">
