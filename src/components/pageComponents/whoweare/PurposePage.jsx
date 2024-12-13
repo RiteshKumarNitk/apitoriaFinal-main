@@ -1,6 +1,6 @@
 import React from "react";
-import labimg from "../../assets/images/lab-img.png";
-import bg2 from "../../assets/pics/bg2.png";
+import labimg from "../../../assets/images/lab-img.png";
+import bg2 from "../../../assets/pics/bg2.png";
 const PurposePage = () => {
   return (
     <section

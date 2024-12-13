@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { LuMinus, LuPlus } from "react-icons/lu";
-import labimg from "../../assets/images/lab-img.png";
+import labimg from "../../../assets/lifeatapitoria/lab2.jpg";
 
 const BusinessCare = () => {
   const [activeIndex, setActiveIndex] = useState(0); // Set the first accordion item as active by default

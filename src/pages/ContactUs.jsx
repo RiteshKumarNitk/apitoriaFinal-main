@@ -1,5 +1,5 @@
 import React from "react";
-import PurposePage from "../components/whoweare/PurposePage";
+import PurposePage from "../components/pageComponents/whoweare/PurposePage";
 import Card from "../components/componentItems/Card";
 import ContactCard from "../components/contactUs/ContactCard";
 import AddressInfo from "../components/contactUs/AddressInfo";

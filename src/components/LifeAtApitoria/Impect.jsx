@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import apitorialogo from "../../assets/pics/logoapitorialogo.png";
 import personpic from "../../assets/lifeatapitoria/lab.jpg";
-import BusinessCare from "../whoweare/BusinessCare";
+import BusinessCare from "../pageComponents/whoweare/BusinessCare";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 const accordionData = [

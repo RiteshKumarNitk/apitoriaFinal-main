@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Abacavir Sulfate",
+    "category": "Anti-Retroviral",
+    "dosage": "OSD, OL",
+    "usdmf": true,
+    "cep": true,
+    "jdmf": false,
+    "kdmf": false,
+    "anvisa": true
+  },
+  {
+    "name": "Vaccination Plus",
+    "category": "Vaccines",
+    "dosage": "Injection",
+    "usdmf": true,
+    "cep": false,
+    "jdmf": true,
+    "kdmf": false,
+    "anvisa": false
+  },
+  {
+    "name": "Speciality Boost",
+    "category": "Specialty Medicines",
+    "dosage": "Tablet",
+    "usdmf": false,
+    "cep": true,
+    "jdmf": false,
+    "kdmf": true,
+    "anvisa": true
+  },
+  {
+    "name": "Abacavir Sulfate",
+    "category": "Anti-Retroviral",
+    "dosage": "OSD, OL",
+    "usdmf": true,
+    "cep": true,
+    "jdmf": false,
+    "kdmf": false,
+    "anvisa": true
+  },
+  {
+    "name": "Vaccination Plus",
+    "category": "Vaccines",
+    "dosage": "Injection",
+    "usdmf": true,
+    "cep": false,
+    "jdmf": true,
+    "kdmf": false,
+    "anvisa": false
+  },
+  {
+    "name": "Speciality Boost",
+    "category": "Specialty Medicines",
+    "dosage": "Tablet",
+    "usdmf": false,
+    "cep": true,
+    "jdmf": false,
+    "kdmf": true,
+    "anvisa": true
+  },
+  {
+    "name": "Abacavir Sulfate",
+    "category": "Anti-Retroviral",
+    "dosage": "OSD, OL",
+    "usdmf": true,
+    "cep": true,
+    "jdmf": false,
+    "kdmf": false,
+    "anvisa": true
+  },
+  {
+    "name": "Vaccination Plus",
+    "category": "Vaccines",
+    "dosage": "Injection",
+    "usdmf": true,
+    "cep": false,
+    "jdmf": true,
+    "kdmf": false,
+    "anvisa": false
+  },
+  {
+    "name": "Speciality Boost",
+    "category": "Specialty Medicines",
+    "dosage": "Tablet",
+    "usdmf": false,
+    "cep": true,
+    "jdmf": false,
+    "kdmf": true,
+    "anvisa": true
+  },
+  {
+    "name": "Abacavir Sulfate",
+    "category": "Anti-Retroviral",
+    "dosage": "OSD, OL",
+    "usdmf": true,
+    "cep": true,
+    "jdmf": false,
+    "kdmf": false,
+    "anvisa": true
+  },
+  {
+    "name": "Vaccination Plus",
+    "category": "Vaccines",
+    "dosage": "Injection",
+    "usdmf": true,
+    "cep": false,
+    "jdmf": true,
+    "kdmf": false,
+    "anvisa": false
+  },
+  {
+    "name": "Speciality Boost",
+    "category": "Specialty Medicines",
+    "dosage": "Tablet",
+    "usdmf": false,
+    "cep": true,
+    "jdmf": false,
+    "kdmf": true,
+    "anvisa": true
+  }
+]

@@ -1,6 +1,6 @@
 import React from "react";
-import PurposePage from "../components/whoweare/PurposePage";
-import BusinessCare from "../components/whoweare/BusinessCare";
+import PurposePage from "../components/pageComponents/whoweare/PurposePage";
+import BusinessCare from "../components/pageComponents/whoweare/BusinessCare";
 import Card from "../components/common/Card";
 const WhoWeAres = () => {
   const accordionData1 = [
