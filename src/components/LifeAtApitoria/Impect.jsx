@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import apitorialogo from "../../assets/pics/logoapitorialogo.png";
+import { useState } from "react";
 import personpic from "../../assets/lifeatapitoria/lab.jpg";
-import BusinessCare from "../whoweare/BusinessCare";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import ToggleAccordion from "./ToggleAccordion";
 
 const accordionData = [
   {
@@ -62,14 +60,10 @@ const accordionData = [
     ),
   },
 ];
-const Impect = ({
-  backgroundImage,
-  title,
-  description,
-  cards,
-  overlayImage,
-  breadcrumbs,
-}) => {
+
+
+
+const Impect = ({ backgroundImage }) => {
   const [activeIndex, setActiveIndex] = useState(0); // Set the first accordion item as active by default
 
   const toggleAccordion = (index) => {
@@ -91,7 +85,7 @@ const Impect = ({
           <h6 className="text-[#c21f28] text-2xl md:text-3xl lg:text-4xl font-semibold">
             Leading the way through IMPACT.
           </h6>
-          <p className="text-[#000000] text-center text-[14px]  lg:max-w-3xl  md:max-w-5xl max-w-full mx-auto mt-4">
+          <p className="text-[#000000] font-semibold text-center text-[14px]  lg:max-w-3xl  md:max-w-5xl max-w-full mx-auto mt-4">
             Apitoria’s leadership is not about ‘authority’. It’s about creating
             an IMPACT. Our leaders embody Integrity (I), Motivation (M), Purpose
             (P), Adaptability (A), Collaboration (C), and Transformation (T).
@@ -112,8 +106,8 @@ const Impect = ({
                         type="button"
                         className={`flex items-center transition-all justify-between w-full py-4 px-3 font-medium ${
                           activeIndex === index
-                            ? "text-white" // Active state
-                            : "text-gray-200" // Non-active state (gray)
+                            ? "text-white" 
+                            : "text-gray-200" 
                         } border-b border-gray-200 border-opacity-60 gap-3`}
                         onClick={() => toggleAccordion(index)}
                       >
@@ -132,7 +126,7 @@ const Impect = ({
                       }`}
                       aria-labelledby={`accordion-flush-heading-${index}`}
                     >
-                      <div className="px-3 pt-2 text-sm text-justify">
+                      <div className="px-3 pt-2 text-sm text-justify max-w-md" >
                         {item.content}
                       </div>
                     </div>
@@ -164,57 +158,30 @@ const Impect = ({
             sets us apart.
           </p>
         </div>
-        <div className=" px-4 md:px-28 lg:px-48">
-          <div className="flex flex-col justify-center text-black ">
-            <div className=" text-black">
-              <div id="accordion-flush">
-                {accordionData.map((item, index) => (
-                  <div key={index}>
-                    <h2 id={`accordion-flush-heading-${index}`}>
-                      <button
-                        type="button"
-                        className={`flex items-center transition-all justify-between w-full py-4 px-3 font-medium ${
-                          activeIndex === index
-                            ? "text-black" // Active state
-                            : "text-gray-800" // Non-active state (gray)
-                        } border-b border-red-400 border-opacity-60 gap-3`}
-                        onClick={() => toggleAccordion(index)}
-                      >
-                        <h1>{item.title}</h1>
-                        {activeIndex === index ? (
-                          <IoIosArrowUp className="w-5 h-5 text-red-400" />
-                        ) : (
-                          <IoIosArrowDown className="w-5 h-5 text-red-400" />
-                        )}
-                      </button>
-                    </h2>
-                    <div
-                      id={`accordion-flush-body-${index}`}
-                      className={`  ${
-                        activeIndex === index ? "block" : "hidden"
-                      }`}
-                      aria-labelledby={`accordion-flush-heading-${index}`}
-                    >
-                      <div className="px-3 pt-2 text-sm text-justify">
-                        {item.content}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="px-4 sm:px-6 md:px-20 lg:px-28 xl:px-48">
+      <div className="flex flex-col justify-center text-black">
+        <div className="text-black">
+          <div id="accordion-flush">
+              <ToggleAccordion />
           </div>
         </div>
+      </div>
+    </div>
       </section>
       <section>
-      <div className="text-center text-4xl py-6 pt-12 font-Regular px-4 sm:px-6 lg:px-32">
-        <div className="leading-5">
+        <div className="text-center text-4xl py-6 pt-12 font-Regular px-4 sm:px-6 lg:px-32">
+          <div className="leading-5">
             <p className="text-[#000000] text-center text-[14px] leading-5  lg:max-w-3xl  md:max-w-5xl max-w-full mx-auto mt-4">
-            Join us in shaping the future of healthcare through our promise of
+              Join us in shaping the future of healthcare through our promise of
             </p>
-            <p className="text-[#000000] text-center text-[14px] font-bold">Agility, Reliability and Innovation.</p>
-        </div>
-          <h6 className="text-[#c21f28] mt-4"> What makes Apitoria the place to be.</h6>
+            <p className="text-[#000000] text-center text-[14px] font-bold">
+              Agility, Reliability and Innovation.
+            </p>
+          </div>
+          <h6 className="text-[#c21f28] mt-4">
+            {" "}
+            What makes Apitoria the place to be.
+          </h6>
         </div>
       </section>
     </section>

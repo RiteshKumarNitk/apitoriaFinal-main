@@ -2,6 +2,7 @@ import bg2 from "../assets/pics/bg2.png";
 import labimg from "../assets/lifeatapitoria/lab2.jpg";
 import HeaderCard from "../components/LifeAtApitoria/HeaderCard";
 import Impect from "../components/LifeAtApitoria/Impect";
+import CardBox from "../components/LifeAtApitoria/CardBox";
 
 const breadcrumbs = [
   { text: "Home", link: "/" },
@@ -16,6 +17,7 @@ const LifeAtApitoria = () => {
         breadcrumbs={breadcrumbs}
       />
       <Impect  backgroundImage={bg2} />
+      <CardBox />
     </div>
   );
 };
