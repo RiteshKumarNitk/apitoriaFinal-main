@@ -8,7 +8,7 @@ const breadcrumbs = [
 const OurBusiness = () => {
   return (
     <div className=" xl:mt-24 lg:mt-24 md:mt-32 sm:mt-24 mt-8">
-      {/* <OurBusinessHeader backgroundImage={bg2} breadcrumbs={breadcrumbs} /> */}
+      <OurBusinessHeader backgroundImage={bg2} breadcrumbs={breadcrumbs} />
     </div>
   );
 };
