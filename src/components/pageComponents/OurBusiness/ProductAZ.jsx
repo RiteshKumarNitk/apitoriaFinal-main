@@ -87,8 +87,8 @@ const ProductAZ = () => {
           </div>
 
           {/* Table */}
-          <div className="overflow-x-auto">
-            <table className="w-full table-auto border-collapse border border-gray-300">
+          <div className="overflow-x-auto shadow-xl">
+            <table className="w-full table-auto border-collapse border border-gray-300 ">
               <thead>
                 <tr className="bg-[#3c286b] text-white">
                   <th className="px-4 py-2 border border-gray-300">Product</th>
@@ -106,7 +106,7 @@ const ProductAZ = () => {
                 </tr>
               </thead>
 
-              <tbody>
+              <tbody className="">
                 <tr className='bg-[#c21f28] text-white "'>
                   <td
                     colSpan={8}

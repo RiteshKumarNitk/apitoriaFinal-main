@@ -79,7 +79,9 @@ const Header = () => {
       >
         <div className="px-4 py-4 flex justify-between items-center container">
           {/* Logo */}
-          <img src={apitoria} width={80} height={40} alt="Apitoria logo" />
+          <Link to="/" className="">
+            <img src={apitoria} width={80} height={40} alt="Apitoria logo" />
+          </Link>
 
           {/* Navigation for Larger Screens */}
           <nav className="hidden md:flex justify-between">
@@ -137,6 +139,7 @@ const Header = () => {
             className="md:hidden text-gray-700"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
+            
           >
             {isMobileMenuOpen ? (
               <AiOutlineClose size={24} />
@@ -176,18 +179,20 @@ const Header = () => {
                 <li key={index}>
                   <Link
                     to={item.to}
-                    className="p-2 text-gray-700 hover:text-red-600"
+                    className="p-2 text-gray-700 hover:text-red-600 "
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="flex flex-row justify-between gap-5 py-3 px-5">
+            <div className="flex flex-row justify-between gap-5 py-3 px-7">
               {navItem2.map((item, index) => (
                 <React.Fragment key={index}>
                   <li>
-                    <Link to={item.to} className="hover:text-red-600">
+                    <Link to={item.to} className="hover:text-red-600"
+                       onClick={() => setIsMobileMenuOpen(false)}>
                       {item.name}
                     </Link>
                   </li>

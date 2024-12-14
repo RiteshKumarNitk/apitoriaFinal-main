@@ -67,8 +67,8 @@ const Business = () => {
           ))}
         </div>
       </div>
-      <div className="t-center spacial-btn mt-8">
-        <button>
+      <div className="text-center spacial-btn mt-8">
+        <button className="">
           <a href="">Take a look at our progress </a>
         </button>
       </div>

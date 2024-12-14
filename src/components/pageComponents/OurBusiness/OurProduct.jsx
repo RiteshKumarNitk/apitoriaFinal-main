@@ -54,8 +54,8 @@ const OurProducts = ({
 
           {/* Features Section */}
           <div className="relative px-6 -mt-24">
-            <section className="bg-gradient-to-r from-[#3c286b] via-[#c21f28] to-[#c21f28] bg-opacity-20 text-white py-8 px-6 sm:px-10 lg:px-16 rounded-2xl shadow-lg max-w-5xl mx-auto">
-              <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 items-center">
+            <section className=" bg-gradient-to-r from-[#3c286b] via-[#c21f28] to-[#c21f28] bg-opacity-20 text-white py-8 px-6 sm:px-10 lg:px-16 rounded-2xl shadow-lg max-w-5xl mx-auto">
+              <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 items-center lg:py-7 md:py-7">
                 {/* Left Content - 25% */}
                 <div className="col-span-1">
                   <h2 className="text-3xl sm:text-3xl md:text-3xl font-bold">
@@ -76,7 +76,7 @@ const OurProducts = ({
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-8 h-8 md:w-12 md:h-12 lg:h-12 lg:w-12 mb-4 "
+                        className="w-8 h-8 md:w-16 md:h-16 lg:h-16 lg:w-16 mb-4 "
                       />
                       <h3 className="text-sm md:text-md lg:text-sm font-normal">
                         {product.title}
