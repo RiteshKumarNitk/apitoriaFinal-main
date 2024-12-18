@@ -45,49 +45,56 @@ const portfolioItems = [
 const PortfolioSection = () => {
   return (
     <div
-      className="py-48 md:py-32 lg:py-32 bg-cover bg-right md:bg-center lg:bg-center xl:bg-center"
-      style={{
-        backgroundImage: `url(${bg})`,
-      }}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row justify-between items-center md:items-start lg:items-start">
-          <div className="lg:w-2/5 px-0 lg:px-5 lg:place-self-center text-white mb-8 lg:mb-0">
-            <p className="text-3xl font-light lg:w-[50%] xl:w-[50%]">
-              Our diverse portfolio, focused on your growth
-            </p>
-            <h5 className="text-6xl font-light my-6">
-              250+ <br />
-              molecules
-            </h5>
-            <button className="mt-4 bg-white text-[#583694] px-4 py-2 rounded-lg">
-              <a href="#" className="flex items-center gap-2">
-                Complete product list
-                <MdKeyboardDoubleArrowRight className="text-black text-[30px]" />
-              </a>
-            </button>
-          </div>
-          <div className="lg:w-3/5">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-              {portfolioItems.map((item, index) => (
-                <div key={index} className="bg-transparent p-2 text-white text-start">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-16 h-16 mb-4 rounded-full"
-                  />
-                  <h6 className="text-lg font-semibold text-white mb-2">
-                    {item.title}
-                  </h6>
-                  <div className="h-1 w-16 bg-white mb-4"></div>
-                  <p>{item.description}</p>
-                </div>
-              ))}
-            </div>
+    className="relative py-48 md:py-32 lg:py-32 bg-cover bg-right md:bg-center lg:bg-center xl:bg-center"
+    style={{
+      backgroundImage: `url(${bg})`,
+    }}
+  >
+    {/* Triangle Divider at the Bottom */}
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-t-[20px] border-t-white border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent"></div>
+
+    {/* Main Content Container */}
+    <div className="container mx-auto px-4 relative z-10">
+      <div className="flex flex-col lg:flex-row justify-between items-center md:items-start lg:items-start">
+        {/* Left Section */}
+        <div className="lg:w-2/5 px-0 lg:px-5 lg:place-self-center text-white mb-8 lg:mb-0">
+          <p className="text-3xl font-light lg:w-[50%] xl:w-[50%]">
+            Our diverse portfolio, focused on your growth
+          </p>
+          <h5 className="text-6xl font-light my-6">
+            250+ <br />
+            molecules
+          </h5>
+          <button className="mt-4 bg-white text-[#583694] px-4 py-2 rounded-lg">
+            <a href="#" className="flex items-center gap-2">
+              Complete product list
+              <MdKeyboardDoubleArrowRight className="text-black text-[30px]" />
+            </a>
+          </button>
+        </div>
+
+        {/* Right Section */}
+        <div className="lg:w-3/5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+            {portfolioItems.map((item, index) => (
+              <div key={index} className="bg-transparent p-2 text-white text-start">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-16 h-16 mb-4 rounded-full"
+                />
+                <h6 className="text-lg font-semibold text-white mb-2">
+                  {item.title}
+                </h6>
+                <div className="h-1 w-16 bg-white mb-4"></div>
+                <p>{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
+  </div>
   );
 };
 

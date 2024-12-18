@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Capabilities from "./Capabilities";
 
 const Tab = ({ title, icon: Icon, active, onClick }) => (
   <button
@@ -32,14 +33,7 @@ const Tabs = ({ tabs, activeTab, onTabChange }) => (
   </div>
 );
 
-const Capabilities = () => (
-  <div className="px-4 sm:px-6 lg:px-32">
-    <p>
-      This is{" "}
-      <span className="font-medium">Capabilities tab's associated content</span>.
-    </p>
-  </div>
-);
+
 const Excellence = () => (
   <div className="px-4 sm:px-6 lg:px-32">
   <p>

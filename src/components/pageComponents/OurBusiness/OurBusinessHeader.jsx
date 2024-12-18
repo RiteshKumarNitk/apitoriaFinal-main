@@ -53,11 +53,11 @@ const OurBusinessHeader = ({ backgroundImage, breadcrumbs }) => {
           </div>
         </div>
 
-        <div className="container px-12">
-        </div>
+        <div className="container px-12"></div>
       </div>
-          <MainComponent />
-          
+      <div>
+        <MainComponent />
+      </div>
     </section>
   );
 };
