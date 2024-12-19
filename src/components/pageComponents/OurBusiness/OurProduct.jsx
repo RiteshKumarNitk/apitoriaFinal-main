@@ -24,7 +24,7 @@ const OurProducts = ({
               <Link
                 to={breadcrumb.link}
                 className={`hover:text-gray-700 ${
-                  index === breadcrumbs.length - 1 ? "text-black" : ""
+                  index === breadcrumbs.length - 1 ? "text-[#3c286b]" : ""
                 }`}
               >
                 {breadcrumb.text}

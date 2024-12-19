@@ -17,6 +17,7 @@ const Header = () => {
   const toggleSearch = () => {
     setIsSearchOpen((prevState) => !prevState);
   };
+
   const navItems = [
     { name: "Who We Are", to: "/who-we-are" },
     { name: "Our Business", to: "/our-business" },
@@ -48,8 +49,13 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  const handleNavigation = () => {
+    setIsMobileMenuOpen(false);
+    window.scrollTo(0, 0); // Scroll to the top
+  };
+
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 ">
+    <div className="fixed top-0 left-0 right-0 z-50">
       {/* Top Bar (Hidden on Mobile Screens) */}
       <header
         className={`custom-gradient w-full absolute transition-transform duration-300 ${
@@ -59,13 +65,15 @@ const Header = () => {
         <nav className="px-4 py-4 flex justify-end items-center container">
           <ul className="flex space-x-2 text-white text-sm gap-3">
             {quickLinks.map((link, index) => (
-              <React.Fragment key={index}>
-                <li>
-                  <Link to={link.to} className="hover:underline">
-                    {link.name}
-                  </Link>
-                </li>
-              </React.Fragment>
+              <li key={index}>
+                <Link
+                  to={link.to}
+                  className="hover:underline"
+                  onClick={handleNavigation}
+                >
+                  {link.name}
+                </Link>
+              </li>
             ))}
           </ul>
         </nav>
@@ -79,7 +87,7 @@ const Header = () => {
       >
         <div className="px-4 py-4 flex justify-between items-center container">
           {/* Logo */}
-          <Link to="/" className="">
+          <Link to="/" className="" onClick={handleNavigation}>
             <img src={apitoria} width={80} height={40} alt="Apitoria logo" />
           </Link>
 
@@ -88,7 +96,11 @@ const Header = () => {
             <ul className="flex space-x-6 text-gray-700">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <Link to={item.to} className="hover:text-red-600">
+                  <Link
+                    to={item.to}
+                    className="hover:text-red-600"
+                    onClick={handleNavigation}
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -96,13 +108,15 @@ const Header = () => {
             </ul>
           </nav>
           <div className="flex flex-row">
-            <ul
-              className={`duration-300 flex items-center flex-row text-gray-700 gap-4 hidden sm:flex`}
-            >
+            <ul className="duration-300 flex items-center flex-row text-gray-700 gap-4 hidden sm:flex">
               {navItem2.map((item, index) => (
                 <React.Fragment key={index}>
                   <li>
-                    <Link to={item.to} className="hover:text-red-600">
+                    <Link
+                      to={item.to}
+                      className="hover:text-red-600"
+                      onClick={handleNavigation}
+                    >
                       {item.name}
                     </Link>
                   </li>
@@ -139,7 +153,6 @@ const Header = () => {
             className="md:hidden text-gray-700"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
-            
           >
             {isMobileMenuOpen ? (
               <AiOutlineClose size={24} />
@@ -152,53 +165,19 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <nav className="md:hidden bg-white shadow-lg">
-            <div className="flex justify-center py-2">
-              {isSearchOpen ? (
-                <div className="flex items-center border border-gray-300 rounded px-2 py-1">
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    className="text-sm outline-none flex-grow"
-                  />
-                  <button onClick={toggleSearch}>
-                    <AiOutlineClose size={20} className="text-gray-700" />
-                  </button>
-                </div>
-              ) : (
-                <button onClick={toggleSearch} aria-label="Open Search">
-                  <IoSearchOutline
-                    size={24}
-                    className="text-gray-700"
-                    style={{ maxWidth: "40px" }}
-                  />
-                </button>
-              )}
-            </div>
             <ul className="flex flex-col items-start space-y-2 p-4">
               {[...quickLinks, ...navItems].map((item, index) => (
                 <li key={index}>
                   <Link
                     to={item.to}
-                    className="p-2 text-gray-700 hover:text-red-600 "
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-2 text-gray-700 hover:text-red-600"
+                    onClick={handleNavigation}
                   >
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="flex flex-row justify-between gap-5 py-3 px-7">
-              {navItem2.map((item, index) => (
-                <React.Fragment key={index}>
-                  <li>
-                    <Link to={item.to} className="hover:text-red-600"
-                       onClick={() => setIsMobileMenuOpen(false)}>
-                      {item.name}
-                    </Link>
-                  </li>
-                </React.Fragment>
-              ))}
-            </div>
           </nav>
         )}
       </header>

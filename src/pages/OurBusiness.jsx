@@ -1,9 +1,9 @@
 import React from "react";
-import bg2 from "../assets/pics/bg2.png";
+import bg2 from "../assets/images/molicules.png";
 import OurBusinessHeader from "../components/pageComponents/OurBusiness/OurBusinessHeader";
 const breadcrumbs = [
   { text: "Home", link: "/" },
-  { text: "Our Business", link: "/our-business" },
+  { text: "Life At Apitoria", link: "/life-at-apitoria" },
 ];
 const OurBusiness = () => {
   return (

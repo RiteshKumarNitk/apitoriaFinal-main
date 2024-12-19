@@ -2,6 +2,10 @@ import React from "react";
 import PurposePage from "../components/pageComponents/whoweare/PurposePage";
 import BusinessCare from "../components/pageComponents/whoweare/BusinessCare";
 import Card from "../components/common/Card";
+const breadcrumbs = [
+  { text: "Home", link: "/" },
+  { text: "Who We Are", link: "/who-we-are" },
+];
 const WhoWeAres = () => {
   const accordionData1 = [
     {
@@ -119,7 +123,8 @@ const WhoWeAres = () => {
   ];
   return (
     <div className=" xl:mt-24 lg:mt-24 md:mt-32 sm:mt-24 mt-8">
-      <PurposePage />
+      <PurposePage breadcrumbs={breadcrumbs}/>
+      
       {/* <BusinessCare /> */}
       <div className=" gap-3">
         <Card

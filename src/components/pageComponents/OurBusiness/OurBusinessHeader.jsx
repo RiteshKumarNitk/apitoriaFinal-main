@@ -8,8 +8,9 @@ const OurBusinessHeader = ({ backgroundImage, breadcrumbs }) => {
       className="pt-12 bg-transparent"
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center center",
+        backgroundSize: "100% auto", // Full width, auto height
+        backgroundRepeat: "repeat-y", // Repeat vertically
+        backgroundPosition: "center top", // Align the background to the top
       }}
     >
       <div className="px-4 sm:px-6 lg:px-32">
@@ -20,7 +21,7 @@ const OurBusinessHeader = ({ backgroundImage, breadcrumbs }) => {
               <Link
                 to={breadcrumb.link}
                 className={`hover:text-gray-700 ${
-                  index === breadcrumbs.length - 1 ? "text-black" : ""
+                  index === breadcrumbs.length - 1 ? "text-[#3c286b]" : ""
                 }`}
               >
                 {breadcrumb.text}
@@ -32,7 +33,7 @@ const OurBusinessHeader = ({ backgroundImage, breadcrumbs }) => {
           ))}
         </div>
         {/* your Legacy  */}
-        <div className="container px-12">
+        <div className=" px-4 md:px-12 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-2 md:gap-8 lg:gap-8">
             <div className="grid-cols-1 text-start text-5xl md:py-6 lg:py-6 font-Regular max-w-lg ">
               <p className=" text-[#3c286b]">
@@ -53,7 +54,7 @@ const OurBusinessHeader = ({ backgroundImage, breadcrumbs }) => {
           </div>
         </div>
 
-        <div className="container px-12"></div>
+        <div className="px-4 md:px-12 lg:px-12"></div>
       </div>
       <div>
         <MainComponent />
